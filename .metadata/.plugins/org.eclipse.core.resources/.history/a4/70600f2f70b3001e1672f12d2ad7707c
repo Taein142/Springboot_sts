@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="Student">
+	<!-- 
+		repository에서 insert 쿼리에서 첫 매개변수 "Student.save"에서 
+		namespace를 .앞에 있는 Student, id는 .뒤에인 save,  
+		파라미터 타입은 insert 쿼리의 두번째 매개변수의 타입값.
+	-->
+	<insert id="save" parameterType="com.example.student.dto.StudentDTO">
+		insert into student_table(studentName, studentNumber, studentMobile)
+			values(#{studentName}, #{studentNumber}, #{studentMobile})
+	</insert>
+	
+	<select id="findAll" resultType="com.example.student.dto.StudentDTO">
+		select * from student_table
+	</select>
+	
+	<select id="findById" parameterType="long" resultType="com.example.student.dto.StudentDTO">
+		select * from student_table where id=#{}
+	</select>
+	
+	
+</mapper>

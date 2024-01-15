@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h2>form2.html</h2>
+	<form action="/form-param2" method="post">
+		inputValue: <input type="text" name="inputValue"> <br> <input
+			type="submit" value="전송">
+	</form>
+</body>
+</html>

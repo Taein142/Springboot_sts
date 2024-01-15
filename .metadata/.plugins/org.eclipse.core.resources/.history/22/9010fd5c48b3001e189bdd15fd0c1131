@@ -1,0 +1,7 @@
+package com.example.student.dto;
+
+public class StudentDTO {
+	private String studentName;
+	private String studentNumber;
+	private String studentMobile;
+}

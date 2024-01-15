@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h2>Hello SpringBoot!!</h2>
+	<!-- hi 주소를 요청하기 위한 링크 -->
+	<a href="/hi">hi 주소요청</a>
+	<!-- 주소요청 & 파라미터 보내기 -->
+	<!-- 주소이름: /param1
+		보낼 파라미터: p1='aa' -->
+	<a href="/param1?p1=aa">param1 주소 요청</a>
+	<a href="/param2?p1=aa&p2=안녕">param2 주소 요청</a>
+	
+	<a href="form1">form1페이지 이동</a>
+	
+	<a href="model1">model1페이지 이동</a>
+	
+	<!-- 
+		아래에 form2 페이지를 열기 위한 링크를 만든다.
+		form2.html에는 input 태그 하나가 있으며,
+		입력을 하고 전송버튼을 클릭하면 from-param2라는 주소로 입력값을 전달한다.
+		컨트롤러에서는 전달받은 값을 model에 담아서
+		model2.html에 출력해준다.
+	 -->
+	 <a href="/form2">form2페이지 이동</a>
+	 
+	 <!-- 
+	 	아래에 form3페이지를 열기 위한 링크를 만든다.
+	 	form3.html에는 input 태그 2개가 있으며
+	 	각각 name, age로 name값을 지정한다.
+	 	입력을 하고 전송버튼을 클릭하면 form=param3라는 주소로 입력 값을 전달한다.
+	 	form=param3 주소를 처리하는 컨트롤러에서는 name, age의 값을 
+	 	print 한다.
+	   -->
+	   
+	   
+	   
+	   
+</body>
+</html>

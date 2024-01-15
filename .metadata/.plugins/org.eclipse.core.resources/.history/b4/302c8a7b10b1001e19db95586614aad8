@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form action="/form=param3" method="post">
+		이름: <input type="text" name="name"> <br>
+		나이 : <input type="text" name="age">
+		<input type="submit" value="전송버튼">
+	</form>
+</body>
+</html>

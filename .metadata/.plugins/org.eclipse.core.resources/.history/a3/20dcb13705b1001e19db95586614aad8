@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h2>form2.html</h2>
+	<form action="/from2-param" method="post">
+	<!-- p1: <input type="text" name="p1"> <br> -->
+	<input type="submit" value="전송">
+	</form>
+</body>
+</html>

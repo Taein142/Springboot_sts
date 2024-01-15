@@ -1,0 +1,24 @@
+package com.example.student.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
+
+import com.example.student.dto.StudentDTO;
+
+@Controller
+public class StudentController {
+	// 학생등록 화면
+	@GetMapping("/save")
+	public String save() {
+		return "save";
+	}
+	
+	// 학생등록 처리
+	@PostMapping("/save")
+	public String save(@ModelAttribute StudentDTO studentDTO) {
+		System.out.println("StudentDTO = " + studentDTO);
+		return "index";
+	}
+}

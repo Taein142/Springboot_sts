@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h2>학생목록</h2>
+	<table>
+		<tr>
+			<th>번호</th>
+			<th>이름</th>
+			<th>학번</th>
+			<th>전화번호</th>
+			<th>조회</th>
+		</tr>
+		<tr th:each="student: ${studentList}">
+			<td th:text="${student.id}"></td>
+			<td th:text="${student.studentName}"></td>
+			<td th:text="${student.studentNumber}"></td>
+			<td th:text="${student.studentMobile}"></td>
+			<td>
+				<!-- 자바스크립트의 함수에 넘겨주는 내용 -->
+				<button th:onclick="detail([[${student.id}]])">조회</button>
+			</td>
+		</tr>
+	</table>
+</body>
+<script th:inline="javascript">
+	const detail = (id) => {
+		console.log("클릭한 id", id);
+		// 1번을 클릭했으면 => /student/1     2번을 클릭했으면 => /student/2
+		// location.href = "/student/" + id;
+		location.href = `/student/${id}`;
+	}
+</script>
+</html>

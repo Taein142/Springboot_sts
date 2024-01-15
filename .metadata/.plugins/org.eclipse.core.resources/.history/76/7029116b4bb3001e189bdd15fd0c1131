@@ -1,0 +1,13 @@
+package com.example.student.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+
+@Controller
+public class StudentController {
+	// 학생등록 화면
+	@GetMapping("/save")
+	public String save() {
+		return "save";
+	}
+}
