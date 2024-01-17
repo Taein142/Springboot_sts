@@ -36,10 +36,10 @@
 				<button th:onclick="detail([[${book.id}]])">조회</button>
 			</td>
 			<td>
-				<button th:onclick="update([[${book.bookDTO}]])">수정</button>
+				<button th:onclick="update_fn([[${book.id}]])">수정</button>
 			</td>
 			<td>
-				<button th:onclick="delete(([${book.id}]))">삭제</button>
+				<button th:onclick="delete_fn(([${book.id}]))">삭제</button>
 			</td>
 		</tr>
 	</table>
@@ -52,8 +52,8 @@
 		console.log("클릭한 책의 id", id);
 		location.href = `/book/${id}`;
 	}
-	const update = () => {
-		
+	const update_fn = (id) => {
+		location.href = `/book/update/${id}`;
 	}
 	const delete_fn = (id) => {
 		location.href = `/book/delete/${id}`;

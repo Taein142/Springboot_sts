@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	input {
+		display: block;
+		/* style에 input display block으로 주면 br 안쳐도 자동 줄바꿈됨 */
+	}
+</style>
+</head>
+<body>
+	<h2>update.html 입니다.</h2>
+	<form action="/update" method="post">
+		<input type="hidden" name="id" th:value="${book.id}">
+		<!-- 수정 못하게 하고 싶으면 맨 뒤에 readonly 붙이면 됨. -->
+		도서명: <input type="text" name="bookName" th:value="${book.bookName}" readonly>
+		저자: <input type="text" name="bookAuthor" th:value="${book.bookAuthor}">
+		출판사: <input type="text" name="bookPublisher" th:value="${book.bookPublisher}">
+		가격: <input type="text" name="bookPrice" th:value="${book.bookPrice}">
+		<input type="submit" value="수정">
+	</form>
+</body>
+</html>

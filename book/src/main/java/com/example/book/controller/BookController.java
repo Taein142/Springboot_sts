@@ -72,4 +72,10 @@ public class BookController {
 		return "redirect:/list";
 	}
 	
+	@GetMapping("/book/update/{id}")
+	public String update(@PathVariable("id") Long id, Model model) {
+		BookDTO bookDTO = bookService.finById(id);
+		model.addAttribute("book", bookDTO);
+		return "update";
+	}
 }
