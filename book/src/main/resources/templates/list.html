@@ -39,7 +39,7 @@
 				<button th:onclick="update_fn([[${book.id}]])">수정</button>
 			</td>
 			<td>
-				<button th:onclick="delete_fn(([${book.id}]))">삭제</button>
+				<button th:onclick="delete_fn([[${book.id}]])">삭제</button>
 			</td>
 		</tr>
 	</table>

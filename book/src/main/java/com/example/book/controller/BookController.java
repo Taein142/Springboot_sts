@@ -78,4 +78,11 @@ public class BookController {
 		model.addAttribute("book", bookDTO);
 		return "update";
 	}
+	
+	@PostMapping("/update")
+	public String update(BookDTO bookDTO) {
+		System.out.println("BookDTO = " + bookDTO);
+		bookService.update(bookDTO);
+		return "redirect:/list"; 
+	}
 }
