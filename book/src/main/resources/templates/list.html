@@ -4,6 +4,12 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
+<style>
+	table, tr, td, th {
+		border: 1px solid black;
+		border-collapse: collapse;
+	}
+</style>
 <body>
 	<h2>책 목록</h2>
 	<table>
@@ -29,6 +35,8 @@
 			</td>
 		</tr>
 	</table>
+	
+	<a href="/">시작화면</a>
 </body>
 <script th:inline="javascript">
 	const detail = (id) => {

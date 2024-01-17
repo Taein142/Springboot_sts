@@ -5,6 +5,7 @@ import lombok.*;
 @Getter
 @Setter
 @ToString
+// @Data 로 해도 됨
 public class BookDTO {
 	private long id;
 	private String bookName;

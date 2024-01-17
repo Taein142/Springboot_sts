@@ -14,6 +14,7 @@ import com.example.book.dto.BookDTO;
 import com.example.book.service.BookService;
 
 
+
 @Controller
 public class BookController {
 	@Autowired
@@ -32,7 +33,11 @@ public class BookController {
 		System.out.println("BookController.save(), post");
 		System.out.println("BookDTO = " + bookDTO);
 		bookService.save(bookDTO);
-		return "index";
+//		return "index";
+//		return "list";  --> 단순하게 list.html만 요청(데이터가 담기지 않고 list페이지로 감.)
+		// list 출력을 위해 list 주소 요청
+		// redirect: 컨트롤러의 메서드에서 다른 메서드의 주소를 요청하고자 할 때(재요청)
+		return "redirect:/list";
 	}
 	
 	// 책 목록 출력
@@ -41,10 +46,8 @@ public class BookController {
 		System.out.println("BookController.list()");
 		//DB에서 리스트(목록)데이터를 가져온다.
 		List<BookDTO> bookDTOs = bookService.findAll();
-		System.out.println(1);
 		// 리스트 데이터를 model에 담는다.
 		model.addAttribute("bookList", bookDTOs);
-		System.out.println(2);
 		return "list";
 	}
 	
@@ -54,6 +57,11 @@ public class BookController {
 		BookDTO bookDTO = bookService.finById(id);
 		model.addAttribute("book", bookDTO);
 		return "detail";
+	}
+	
+	@GetMapping("/update")
+	public String update() {
+		
 	}
 	
 }
