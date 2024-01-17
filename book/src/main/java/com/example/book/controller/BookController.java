@@ -62,7 +62,7 @@ public class BookController {
 	@GetMapping("/update")
 	public String update() {
 		System.out.println("북컨트롤러의 update 메소드");
-		
+		return "redirect:/list";
 	}
 	
 	@GetMapping("/book/delete/{id}")
