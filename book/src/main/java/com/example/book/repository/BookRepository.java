@@ -27,5 +27,9 @@ public class BookRepository {
 		System.out.println("레파지의 findById");
 		return sql.selectOne("Book.findById", id);
 	}
+
+	public void delete(Long id) {
+		sql.delete("Book.delete", id);
+	}
 	
 }

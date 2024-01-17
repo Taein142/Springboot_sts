@@ -20,6 +20,8 @@
 			<th>출판사</th>
 			<th>가격</th>
 			<th>조회</th>
+			<th>수정</th>
+			<th>삭제</th>
 		</tr>
 		<tr th:each="book: ${bookList}">
 			<td th:text="${book.id}"></td>
@@ -33,6 +35,12 @@
 			<td>
 				<button th:onclick="detail([[${book.id}]])">조회</button>
 			</td>
+			<td>
+				<button th:onclick="update([[${book.bookDTO}]])">수정</button>
+			</td>
+			<td>
+				<button th:onclick="delete(([${book.id}]))">삭제</button>
+			</td>
 		</tr>
 	</table>
 	
@@ -43,6 +51,12 @@
 		console.log("list.html.script.detail");
 		console.log("클릭한 책의 id", id);
 		location.href = `/book/${id}`;
+	}
+	const update = () => {
+		
+	}
+	const delete_fn = (id) => {
+		location.href = `/book/delete/${id}`;
 	}
 </script>
 </html>

@@ -24,4 +24,7 @@ public class BookService {
 		System.out.println("서비스의 findById");
 		return bookRepository.findById(id);
 	}
+	public void delete(Long id) {
+		bookRepository.delete(id);
+	}
 }

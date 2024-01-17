@@ -12,8 +12,16 @@
 		select * from book_table
 	</select>
 	
-	<select id="findById" parameterType="Long"
-		resultType="com.example.book.dto.BookDTO">
+	<select id="findById" parameterType="Long" resultType="com.example.book.dto.BookDTO">
 		select * from book_table where id=#{id}
 	</select>
+	
+	<update id="update" parameterType="com.example.book.dto.BookDTO">
+		update book_table set bookName='' where id ='' ;
+	</update>
+	
+	<delete id="delete" parameterType="Long">
+		delete from book_table where id = #{id}
+	</delete>
+	
 </mapper>
