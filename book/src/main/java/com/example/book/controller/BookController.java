@@ -59,12 +59,6 @@ public class BookController {
 		return "detail";
 	}
 	
-	@GetMapping("/update")
-	public String update() {
-		System.out.println("북컨트롤러의 update 메소드");
-		return "redirect:/list";
-	}
-	
 	@GetMapping("/book/delete/{id}")
 	public String delete(@PathVariable("id") Long id) {
 		System.out.println("북컨트롤러의 delete 메소드");
