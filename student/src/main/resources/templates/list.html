@@ -17,7 +17,8 @@
 		<tr th:each="student: ${studentList}">
 			<td>
 				<!-- 경로상에 주소를 표현하고자 할 때 -->
-				<a th:href="@{|/student/${student.id}|}" th:text="${student.id}"></a>
+				<a th:href="@{|/student/${student.id}|}" 
+				th:text="${student.id}"></a>
 			</td>
 			<!-- <td th:text="${student.id}"></td> -->
 			<td th:text="${student.studentName}"></td>

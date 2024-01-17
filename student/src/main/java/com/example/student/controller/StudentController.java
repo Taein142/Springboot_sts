@@ -17,7 +17,6 @@ import com.example.student.service.StudentService;
 public class StudentController {
 	@Autowired
 	private StudentService studentService;
-	
 	// 학생등록 화면 출력
 	@GetMapping("/save")
 	public String save() {

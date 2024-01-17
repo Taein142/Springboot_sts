@@ -17,7 +17,8 @@
 		select * from student_table
 	</select>
 
-	<select id="findById" parameterType="Long" resultType="com.example.student.dto.StudentDTO">
+	<select id="findById" parameterType="Long" 
+		resultType="com.example.student.dto.StudentDTO">
 		select * from student_table where id=#{id}
 	</select>
 </mapper>
